@@ -4,8 +4,7 @@ Running on PC/raspberry pi
 
 # Features
 
-***To use this library, the first thing you need to do is upgrade to the lastest 2.1.0 sdk***
-
+***To use this library, you need to upgrade to the lastest 2.1.0 sdk***
 ```python
 # initial module
 from esp8266 import ESP8266
