@@ -1,29 +1,28 @@
-# esp8266py
-ESP8266 python library, a wrapper for AT commands (Hayes command set) UART serial.
-Running on PC/raspberry pi 
+# esp8266.py
+ESP8266 python library, a wrapper for AT commands (Hayes command set) using UART serial.
+Could be running on PC/raspberry pi easily.
 
 # Features
 
-***To use this library, you need to upgrade to the lastest 2.1.0 sdk***
 ```python
 # initial module
 from esp8266 import ESP8266
-esp01 = ESP8266()
-
-# execute synchronously
-res = esp01.runCommand(command="AT")
+esp01 = ESP8266(port="/dev/ttyAMA0", baudrate=115200)
 
 # callback on data receive
-@esp01.onData
-def process(data):
+@esp01.on_data
+def on_data(data, link_id):
+    print '@@@@@@ data arrived:'
+    print 'link id:', link_id
     print data
-
-esp01.runCommand('AT+CIPSTART=0,"TCP","192.168.199.117",7788', ['OK', 'ERROR', 'ALREADY CONNECT'])
-# then in the host 192.168.199.117, type 'nc -l 7788' in console. you can communicate with each other
-# through the module. 
+    esp01.send("hello world \n", link_id)
 ```
+# API
 
 # TODO
 
-* turn all at command to function
-* route network
+* WSGI api
+* sync command
+
+
+
