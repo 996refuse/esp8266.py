@@ -1,4 +1,5 @@
 # esp8266.py
+
 ESP8266 python library, a wrapper for AT commands (Hayes command set) using UART serial.
 Could be running on PC/raspberry pi easily.
 
@@ -7,7 +8,12 @@ Could be running on PC/raspberry pi easily.
 * python2.7
 * pySerial
 
-# Hardware wiring (Connect ESP8266 to RPI)
+# Hardware wiring (Connect ESP8266-01 to RPI)
+
+    RX    -> TX      VCC   -> 3.3v
+    GPIO0            RST
+    GPIO2            CH_PD -> 3.3v
+    GND   -> ground  TX    -> RX
 
 # Usage
 
@@ -29,12 +35,6 @@ def on_data(data, link_id):
 esp01.send("hello world \n", link_id)
 ```
 
-# API
-
 # TODO
 
 * WSGI api
-* sync command
-
-
-
