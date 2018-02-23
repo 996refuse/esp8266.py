@@ -29,10 +29,11 @@ def on_data(data, link_id):
     print '@@@@@@ data arrived:'
     print 'link id:', link_id
     print data
+    esp01.send("pong! \n", link_id)
 
 
 # send data
-esp01.send("hello world \n", link_id)
+esp01.send("hello world \n", '0')
 ```
 
 # TODO
