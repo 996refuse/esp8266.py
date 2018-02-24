@@ -19,6 +19,8 @@ Could be running on PC/raspberry pi easily.
 
 ```python
 # initialize
+# After initialization you could use the default password '11111111' to connect
+# to wifi 'esp8266.py' and connect port 8080 on 192.168.4.1 through telnet/nc.
 from esp8266 import ESP8266
 esp01 = ESP8266(port="/dev/ttyAMA0", baudrate=115200)
 
