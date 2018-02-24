@@ -55,7 +55,7 @@ class ESP8266Serial(Serial):
         time.sleep(0.5)
 
         # config SoftAP
-        self.write('AT+CWSAP_CUR="esp8266py","88888888",5,3\r\n')
+        self.write('AT+CWSAP_CUR="esp8266.py","11111111",5,3\r\n')
         time.sleep(0.5)
 
         # set server port 8080
