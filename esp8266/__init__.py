@@ -4,6 +4,7 @@ import time
 import Queue
 
 name = "esp8266.py"
+__all__ = ["ESP8266"]
 
 class ESP8266Serial(Serial):
     def __init__(self, *args, **kwargs):
@@ -162,3 +163,4 @@ if __name__ == '__main__':
         print 'link id:', link_id
         print data
         esp01.send("Hello, world! \n", '0')
+
