@@ -3,9 +3,15 @@
 ESP8266 python library, a wrapper for AT commands (Hayes command set) using UART serial.
 Could be running on PC/raspberry pi easily.
 
+# Install
+
+```sh
+    pip install esp8266.py
+```
+
 # Dependency
 
-* python2.7
+* python2.7 or 3.X(not tested)
 * pySerial
 
 # Hardware wiring (Connect ESP8266-01 to RPI)
