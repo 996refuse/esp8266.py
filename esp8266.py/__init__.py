@@ -3,6 +3,7 @@ from serial import Serial
 import time
 import Queue
 
+name = "esp8266.py"
 
 class ESP8266Serial(Serial):
     def __init__(self, *args, **kwargs):
